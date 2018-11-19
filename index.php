@@ -40,6 +40,8 @@ $tasks_list = [
             'task_done' => 'Нет'
         ]
 ];
+$index = 0;
+$num_count = count($projects);
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -84,12 +86,15 @@ $tasks_list = [
                 <h2 class="content__side-heading">Проекты</h2>
 
                 <nav class="main-navigation">
+                    <?php while($index < $num_count): ?>
                     <ul class="main-navigation__list">
                         <li class="main-navigation__list-item">
-                            <a class="main-navigation__list-item-link" href="#">Название проекта</a>
+                            <a class="main-navigation__list-item-link" href="#"><?=$projects[$index];?></a>
                             <span class="main-navigation__list-item-count">0</span>
                         </li>
                     </ul>
+                    <?php $index = $index + 1; ?>
+                    <?php endwhile; ?>
                 </nav>
 
                 <a class="button button--transparent button--plus content__side-button"
