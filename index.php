@@ -42,6 +42,9 @@ $tasks_list = [
 ];
 $index = 0;
 $num_count = count($projects);
+function task_count ($task_list, $projects) {
+   $result = count('category' == $projects{$index});
+  }
 ?>
 <!DOCTYPE html>
 <html lang="ru">
@@ -90,7 +93,7 @@ $num_count = count($projects);
                     <ul class="main-navigation__list">
                         <li class="main-navigation__list-item">
                             <a class="main-navigation__list-item-link" href="#"><?=$projects[$index];?></a>
-                            <span class="main-navigation__list-item-count">0</span>
+                            <span class="main-navigation__list-item-count"><?=$result;?></span>
                         </li>
                     </ul>
                     <?php $index = $index + 1; ?>
